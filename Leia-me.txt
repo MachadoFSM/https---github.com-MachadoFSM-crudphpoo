@@ -1,0 +1,10 @@
+Trabalho CRUD com PHP orientado a objetos, pdo e MySQL (WDEV).
+
+Ferramentas:
+
+Bootstrap  v: 5.1
+Wampserver v: 3.2.3
+PHP        v: 7.3.21
+Composer   v: 2.2.12
+V.S. Code  v: 1.67.0
+
