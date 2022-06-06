@@ -100,4 +100,24 @@ class Database{
         //Retorna o ID inserido
         return $this->connection->lastInsertId();
     }
+
+    /*
+    Método de consulta no banco
+    @param string $where
+    @param string $order
+    @param string $limit
+    @return PDOStatement
+    */
+    public function select($where = null, $order = null, $limit = null, $fields = '*'){
+      //Dados da query
+      $where = strlen($where) ? 'WHERE '.$where : '';
+      $order = strlen($order) ? 'ORDER BY '.$order : '';
+      $limit = strlen($limit) ? 'LIMIT '.$limit : '';
+      
+      //Monta query
+      $query = 'SELECT '.$fields.' FROM '.$this->table.' '.$where.' '.$order.' '.$limit;
+
+      //Executa a query
+      return $this->execute($query);
+    }
 }
